@@ -1,38 +1,128 @@
 
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    color: #333;
 }
 
 header {
-    background-color: #007bff;
+    background: #172554;
     color: white;
-    padding: 30px;
+    text-align: center;
+    padding: 35px 15px;
 }
 
-section {
-    background-color: white;
-    margin: 30px auto;
-    padding: 30px;
-    width: 70%;
-    border-radius: 10px;
+header h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+.task-box, .task-list {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 h2 {
-    color: #007bff;
+    color: #172554;
+    margin-bottom: 20px;
 }
 
-a {
-    color: #ff6600;
-    text-decoration: none;
-    font-weight: bold;
+input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    background: #f1f5f9;
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
 }
 
 footer {
-    background-color: #222;
+    background: #172554;
     color: white;
-    padding: 15px;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width: 550px) {
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-box button {
+        width: 100%;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
 }
